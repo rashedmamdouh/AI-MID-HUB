@@ -1,0 +1,30 @@
+# Core web framework
+fastapi==0.109.1
+uvicorn[standard]==0.27.0
+python-multipart==0.0.9
+pydantic==2.6.1
+python-dotenv
+requests
+
+# Numeric / imaging
+numpy>=1.26
+pillow
+opencv-python-headless
+scikit-learn
+sentencepiece
+
+# PyTorch CPU-only (lighter than default) — must come from PyTorch's CPU index
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.2.2+cpu
+torchvision==0.17.2+cpu
+
+# AI / ML
+transformers==4.37.2
+accelerate
+easyocr
+sentence-transformers
+faiss-cpu
+albumentations
+
+# Optional
+anthropic
