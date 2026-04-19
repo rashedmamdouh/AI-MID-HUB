@@ -108,8 +108,14 @@ def load_models():
     _models["tissue"]     = _load_single("tissue",     TISSUE_PATH,     4)
 
 
-# Try loading on import; if weights missing the endpoint returns 503
-load_models()
+_models_loaded = False
+
+
+def _ensure_models():
+    global _models_loaded
+    if not _models_loaded:
+        load_models()
+        _models_loaded = True
 
 
 # ─── Preprocessing (matches your preprocess_image exactly) ────────────────
