@@ -676,9 +676,9 @@
     </div>
     <script>
         // ═══════════ CONFIG ═══════════
-        const API = window.location.port === "8000"
-            ? "/api"
-            : "http://localhost:8000/api";
+        const API = window.location.hostname === "localhost"
+            ? "http://localhost:8000/api"
+            : "/api";
 
         // ═══════════ UTILS ═══════════
         function showToast(msg, err = false) {
