@@ -227,6 +227,9 @@ async def classify_xray(image: UploadFile = File(...)):
     if image.content_type not in ("image/png", "image/jpeg", "image/jpg"):
         raise HTTPException(400, "Only PNG/JPG images are accepted.")
 
+    # Load models on first request
+    _ensure_models()
+
     # Check models
     if not all(_models.values()):
         missing = [k for k, v in _models.items() if v is None]
