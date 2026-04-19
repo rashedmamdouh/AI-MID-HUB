@@ -15,11 +15,11 @@ sentencepiece
 
 # PyTorch CPU-only (lighter than default) — must come from PyTorch's CPU index
 --extra-index-url https://download.pytorch.org/whl/cpu
-torch==2.2.2+cpu
-torchvision==0.17.2+cpu
+torch==2.11.0+cpu
+torchvision==0.26.0+cpu
 
 # AI / ML
-transformers==4.37.2
+transformers>=4.40.0
 accelerate
 easyocr
 sentence-transformers
